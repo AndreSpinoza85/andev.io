@@ -4,15 +4,32 @@ body
     
     font-family: 'Raleway', sans-serif;
     background-color: #ffff;
-    margin: auto;
     display: grid;
    
-
 }
+@media all and (max-width: 900px) 
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+ @media all and (max-width: 900px) 
+{
+     body
+    {   
+        margin-left: 0px;
+    }
+}
+
+
 #bloc_page
 {
-    width: 100%;
-    height: auto;
+    width: auto;
     margin: auto;
     display: block;
     background-color: white;
@@ -22,12 +39,11 @@ body
 @media all and (max-width: 900px) 
 {
     #bloc_page
-    {
+    {   
         width: 100%;
-        height: auto;
         display: flex;
         flex-direction: column;
-        
+     
     }
 }
 
@@ -60,6 +76,7 @@ header h1
     font-size: 1.3em;
     text-align: left;
     margin-top: 20px;
+    font-weight: bolder;
 
    
 }
@@ -75,12 +92,15 @@ header h2
 /* div carte*/
 
 
+div .carte
+{
+    padding-top: 15px;
+}
 
 div button 
 {
     
-    width: auto;
-    height: auto;
+   
     font-size: 1.1em;
     border-width: 1px;
     padding: 10px 15px 10px 15px;
@@ -111,10 +131,7 @@ div button i
 
 
 }
-.carte .search
-{
-    display: ;
-}
+
 
 .carte  .loupe
 {
@@ -127,9 +144,10 @@ div button i
 
 .filtres
 {
-    width: 150%;
-    height: 20%;
+    width: 160%;
+    height: auto;
     margin-top: 20px;
+    margin-left: 10px;
 
 }
 
@@ -144,14 +162,13 @@ div input
 
 span button
 {
-    display: table-cell;
-    justify-content:center;
+   
     color: black;
-    font-weight: lighter;
-    font-size: 1rem;
+    font-weight:600;
+    font-size: 0.9em;
     border-radius: 30px;
     padding: 1px 20px 1px 0px;
-    margin: 10px;
+    margin: 14px;
     background-color: white;
     border-color: rgb(217, 217, 243);
     border-style:double;
@@ -186,13 +203,14 @@ span i
    
    background-color: white;
    border-radius: 15px;
-   font-size: 1em;
+   font-size: 1px;
    
 }
 .info i
 {
-   color: blue;
-   font-size: 1em;
+   color: #0065fc;
+   font-size: 0.6em;
+   border-radius: 30px;
 
 }
 .info button
@@ -203,28 +221,28 @@ span i
     border-style:double;
 
 }
-p
+.info  p
 {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     
 }
 
 @media all and (max-width: 900px) 
 {
     header
-    {
-        width: 50%;
-        height: auto;
+    {  
+        
         display: flex;
         flex-direction: column;
         text-align: left;
-        margin-top: -100px;
+        margin-top: -80px;
+        margin-left: 30px;
     }
     
    
     header h1
     {
-       width: 110%; 
+       width: 70%;
        display: flex;
        text-align:left;
        font-size: 1.4em;
@@ -232,9 +250,14 @@ p
     }
     header h2  
     {
-        width: 110%;
         font-size: 1em;
     }
+    div .carte
+    {
+        width: 70%;
+        padding-top: 20px;
+    }
+
     .carte  .search
     {
     display: none;
@@ -247,31 +270,47 @@ p
         font-size: 1.3em;
         color: white;
         padding: 10px 15px 10px 15px;
-        border-radius: 0px 15px 15px 0px;
+        border-radius: 12px 12px 12px 12px;
       
     }
   
 
 
 
-    div .carte
-    {
-        width: 110%;
-    }
+    
     div .filtres
     {
-        width: 100%;
         display: flex;
         flex-direction:column;
+        margin-top: 30px;
+        margin-left: -10px;
+    
 
+    }
+
+    div.filtres strong
+    {
+        margin-left: 20px;
     }
     
     .info
     {
-        width: 130%;
-        font-size: 3em;
+        width: 60%;
+        display: flex;
+        font-size: 1em;
     }
-
+    .info i
+    {
+       color: #0065fc;
+       font-size: 0.6em;
+    
+    }
+    .info button 
+    {
+        border-radius: 20px 20px 20px 20px;
+        width: 5%;
+        height: 70%;
+    }
 
 
 
@@ -282,16 +321,15 @@ p
 
 nav
 {
-    width: 100%;
-    padding-top: 1px;
+    padding-top: 0px;
+    margin-top: -20px;
 
 }
 
 
 #logo img
 {   
-    width: 90px;
-    height: 50px;
+   
     margin-left: 50px;
     margin-top: 30px;
 }
@@ -316,7 +354,7 @@ nav li
 }
 nav a
 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: black;
     text-decoration: none;
     padding-bottom: 10px;
@@ -332,10 +370,11 @@ div .inscrire
     padding-top: 5px;
 }
 
-nav :hover
+nav a:hover
 {
     color: #0065FC;
-    border-top: 3px  #0065FC;
+    padding-top: 3.6em;
+    border-top: 3px solid #0065FC;
 }
 
 
@@ -345,14 +384,12 @@ nav :hover
 @media all and (max-width: 900px) 
 {
 
-    nav
-    {
-        width: 85%;
-    }
+    
     #logo img
     {
-        font-size: 9em;
-        
+        margin-top: 30px;
+        font-size: large;
+        height: 50px;
 
     }
    
@@ -365,9 +402,10 @@ nav :hover
         flex-direction:row;
         flex-wrap:wrap-reverse;
         text-align: right;
-        padding-bottom: -100px;
+        padding-bottom: 0px;
         margin-bottom: 100px;
         border-bottom: 4px solid whitesmoke;
+        
     }
 
    
@@ -375,10 +413,10 @@ nav :hover
 
     nav li
     {
-        width: auto;
         font-size: 1.2em;
         padding: 30px;
-        margin-bottom: 0px;
+        padding-left: 30px;
+        margin-bottom: -30px;
         text-align: right;
     }
 
@@ -388,19 +426,25 @@ nav :hover
         float: right;
         text-align: right;
     }
-    div .inscrire
+     div .inscrire
     {
-        display: flex;
-        text-align: right;
-        padding-left: 380px;
+        padding-left: 360px;
+        padding-bottom: 30px;
+      
     }
-
+    .inscrire
+    {
+        margin-top: 1px;
+        padding-right: 20px;
+    }
+    
    
          
-    nav :hover 
+    nav a:hover
     {
-    color: #0065FC;
-    border-top: 1.5px #0065FC;
+    border-bottom: 3px solid #0065FC;
+    padding: 0.1em 0 0.1em 0;
+    border-top:none;
     }
 
 
@@ -424,13 +468,14 @@ nav :hover
     text-align: center;
     justify-content: center;
     width: 710px;
-    height: 450px;
+    height: 490px;
     background-color: #F2F2F2;
     border-radius: 20px;
     text-align: left;
     margin: 0px 0px 0px 40px;
     padding: 30px;
-    margin-top: -30px;    
+    margin-top: -30px; 
+    padding-right:10px ;   
     /*
     width: 300px;
     height: 500px; */
@@ -451,13 +496,13 @@ h1
 .bloc
 {
     float: left;
-    justify-content: center;
     border-radius: 15px;
-    width: 220px;
-    height: 170px;
+    width: 215px;
+    height: 180px;
     text-align: left;
     font-size: medium;
     background-color: white;
+    box-shadow: 0px 3px 0px rgb(218, 210, 210);
     margin-top: 25px;
     padding: 1px 1px 1px 1px;
     
@@ -513,41 +558,52 @@ h1
 }
 
 
-aside img
+.full
 {
     display: block;
     justify-content: center;
     text-align: right;
     width: 210px;
     height: 95px;
+    object-fit: cover;
     border-radius: 15px 15px 0px 0px;
     padding-top: 0px;
-    margin-top: -5px;
+    margin-top: -8px;
+    margin-left: -10px;
 
 }
+
+
 
 #hebergements h2
 {
     font-size: 0.80em;
+    padding-left: 10px;
 }
 
 #hebergements p
 {
     font-size: 10px;
-
+    padding-left: 10px;
 }
 
 #hebergements i
 {
     color: #0065FC;
     font-size: 9px;
+    
+}
+#hebergements #grey 
+{
+    color: #F2F2F2;
+    
 }
 
 #hebergements h6
 {
     display: inline-table;
     padding: 10px;
-    font-size: 0.8em;
+    font-size: 1em;
     padding-top: 1px;
 }
 
@@ -561,7 +617,7 @@ aside img
 {
     float: left;
     width: 310px;
-    height: 450px;
+    height: 490px;
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 30px;
@@ -588,7 +644,8 @@ aside img
     float: right;
     display: table-cell;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
+    margin-top: -35px;
     background-color: #F2F2F2;
     border: #F2F2F2;
 }
@@ -596,11 +653,13 @@ aside img
 .carre
 {
     
-    border-radius: 15px;
+    border-radius: 20px;
     width: 90%;
     height: 106px;
     background-color: white;
     margin-top: 30px;
+    box-shadow: 0px 3px 0px rgb(218, 210, 210);
+    
 
 }
 
@@ -610,11 +669,12 @@ aside img
     float: left;
     width: 43%;
     height: 100px;
+    object-fit: cover;
     margin: 5px;
     margin-top: 2px;
     margin-left: -5px;
     margin-bottom: 20px;
-    border-radius: 15px;
+    border-radius: 20px 0px 0px 20px;
     padding: 1px 15px 1px 10px;
     
 }
@@ -630,11 +690,19 @@ aside img
 
 #populaires p i
 {
-    
-    text-align:left;
+  
+    text-align:right;
     color: #0065FC;
     font-size: 9px;
     padding-right: 0px;
+    padding-top: 12px;
+
+}
+
+#populaires #grey 
+{
+    color: #F2F2F2;
+    
 }
 
 
@@ -665,15 +733,15 @@ aside img
     }
     .bloc
     {
-        width: 300px;
-        height: auto;
+        width: 350px;
+        height: 180px;
         padding-left: 0px;
-        box-shadow: 0px 4px 0px 0px whitesmoke;
 
     }
-    aside img  
+    #hebergements   aside img  
     {
-        width: 300px;
+        width: 350px;
+        height: 120px;
     }
     #hebergements h1
     {
@@ -682,10 +750,13 @@ aside img
     #hebergements h2
     {
         font-size: 1em;
+        margin-top: -10px;
     }
     #hebergements p 
     {
         font-size: 0.8em;
+        margin-top: -10px;
+
     }
     
     
@@ -695,24 +766,26 @@ aside img
     
     #populaires
     {
-        width: 70%;
+        width: 78%;
         height: auto;
         display: flex;
         flex-direction: column;
-        margin-left: 45px;
-        margin-left: 1px;
-        margin-right: 1px;
+        margin-left: 2px;
+        border-radius: 0px;
     }
     #populaires h1
     {
         font-size: 1.5em;
+        padding-left: 15px;
     }
 
     .carre
     {
-        width: 100%;
+        width: 80%;
         height: 130px;
-        box-shadow: 0px 1px 0px 0px whitesmoke;
+        margin-left: 20px;
+        
+
 
     }
     #populaires img
@@ -738,6 +811,10 @@ aside img
 
    
     }
+    #populaires span i
+    {
+        padding-right: 80px;
+    }
     
 }
 
@@ -749,10 +826,10 @@ aside img
 
 article
 {
-    width: 1175px;
+    width: 93%;
     display:inline-block;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     margin: 0px 0px 0px 20px;
     background-color:white;
 }
@@ -782,13 +859,18 @@ h3
     margin: 5px;
     padding-top: 5px;
     border-radius: 20px;
-    box-shadow: 0px 4px 0px whitesmoke;
+    box-shadow: 0px 3px 0px rgb(218, 210, 210);
     
     
+}
+.paysage img
+{
+    border-radius: 20px 20px 0px 0px;
 }
 
 h4
 {
+    padding-left: 15px;
     font-size: 0.9em;
 
 }
@@ -796,13 +878,15 @@ h4
 #paysage_1
 {
     width: 280px;
-    height: 380px;
+    height: 390px;
     background-color: white;
 }
 #paysage_1 img
 {
     width: 280px;
     height: 340px;
+    object-fit: cover;
+
 }
 
 
@@ -816,14 +900,15 @@ h4
 #paysage_2 img
 {
     width: 250px;
-    height: 160px;
+    height: 150px;
+    object-fit: cover;
     
 }
 
 #paysage_3
 {
     width: 250px;
-    height: 160px;
+    height: 170px;
     background-color: white;
 }
 
@@ -831,6 +916,7 @@ h4
 {
     width: 250px;
     height: 120px;
+    object-fit: cover;
 }
 
 
@@ -847,7 +933,7 @@ h4
     display: flex;
     text-align: left;
     width: 280px;
-    height: 380px;
+    height: 390px;
     background-color:white;
 }
 #paysage_4 img
@@ -855,6 +941,8 @@ h4
     
     width: 280px;
     height: 340px;
+    object-fit: cover;
+
 }
 
 #paysage_5
@@ -870,14 +958,16 @@ h4
 #paysage_5 img
 {
     width: 250px;
-    height: 120px;
+    height: 110px;
+    object-fit: cover;
+
 }
 
 
 #paysage_6
 {
     width: 250px;
-    height: 200px;
+    height: 210px;
     background-color: white;
 }
 
@@ -885,6 +975,8 @@ h4
 {
     width: 250px;
     height: 160px;
+    object-fit: cover;
+
     
 }
 
@@ -904,7 +996,10 @@ h4
     }
     article h4
     {
-        font-size: 1em;
+        padding-left: 15px;
+        font-size: 0.9em;
+
+
     }
 
     #paysage
@@ -914,69 +1009,68 @@ h4
 
     #paysage_1
     {
-        width: 300px;
-
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_1 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
     #paysage_2
     {
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_2 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
     #paysage_3
     {
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_3 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
     #paysage_4
     {
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_4 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
     #paysage_5
     {
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_5 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
     #paysage_6
     {
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 190px;
         background-color: white;
     }
     #paysage_6 img
     {
-    width: 300px;
+    width: 350px;
     height: 140px;
     }
 
